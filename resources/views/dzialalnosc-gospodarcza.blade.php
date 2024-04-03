@@ -1,4 +1,10 @@
+@php
+    $title = 'Działalność gospodarcza';
+    $route = ["Działalność gospodarcza"]
+@endphp
+
 <x-layout>
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu />
         <div class="mb-20 text-lg">

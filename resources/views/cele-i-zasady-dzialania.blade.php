@@ -1,4 +1,10 @@
+@php
+    $title = 'Cele i zasady działania';
+    $route = ["Cele i zasady działania"]
+@endphp
+
 <x-layout>
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu />
         <div class="my-20 text-lg">

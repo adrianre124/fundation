@@ -1,4 +1,10 @@
+@php
+    $title = 'Statut Fundacji';
+    $route = ["Statut Fundacji"]
+@endphp
+
 <x-layout>
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu/>
         <div id="content" role="main" class="ml-20 max-w-10/12 text-lg">

@@ -1,12 +1,20 @@
-<x-layout>
+@php
+    $title = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
+    $routeFirstArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
+    $routeSecondArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[2]);
+    $route = [$routeFirstArgument, $routeSecondArgument]
+@endphp
+
+<x-layout :title="$title">
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu/>
         <div class="py-10 space-y-10">
-            <h1 class="text-3xl text-center text-blue-600 font-semibold">{{ $practice->slug }} - Praktyki</h1>
+            <h1 class="text-3xl text-center text-blue-600 font-semibold">{{ $practice->title }} - Praktyki</h1>
             <div>{!! $practice->description !!}</div>
 
             <div>
-
+                <img src="{{ asset('storage/' . $practice->thumbnail) }}" alt="">
             </div>
 
             <div>

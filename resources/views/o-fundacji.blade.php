@@ -1,4 +1,10 @@
-<x-layout>
+@php
+    $title = 'O Fundacji';
+    $route = ["O fundacji"]
+@endphp
+
+<x-layout :title="$title">
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu />
 
@@ -34,7 +40,7 @@
                 <p style="font-size: 13pt !important; text-align: justify !important;">Swoje cele Fundacja realizuje
                     poprzez programy, konferencje, szkolenia oraz konkretne projekty (patrz zakładka &#8222;<a
                         style="color: red; font-weight: bold; text-decoration: underline;"
-                        href="https://fundacjaglosmlodych.org/index.php?option=com_content&amp;view=article&amp;id=7&amp;Itemid=9">Projekty</a>&#8222;).
+                        href="/projekty">Projekty</a>&#8222;).
                 </p>
             </div>
         </div>

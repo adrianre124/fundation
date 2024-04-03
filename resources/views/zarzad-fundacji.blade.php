@@ -1,4 +1,10 @@
+@php
+    $title = 'Zarząd fundacji';
+    $route = ["Zarząd fundacji"]
+@endphp
+
 <x-layout>
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu />
         <div class="entry-content mt-20">

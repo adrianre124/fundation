@@ -1,12 +1,18 @@
 <!doctype html>
 
-<title>Laravel From Scratch Blog</title>
+<title>
+    @isset($title)
+        {{ $title }} |
+    @endisset
+    {{ config('app.name') }}
+</title>
 {{--<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">--}}
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+<script src="https://cdn.tailwindcss.com"></script>
 @vite('resources/css/app.css')
 <style>
     html {
@@ -33,14 +39,15 @@
                 </div>
             </header>
 
-            <nav class="bg-black text-white h-10">
-                <ul class="flex flex-row flex-wrap items-center align-middle justify-center text-xs text-nowrap py-auto h-full">
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400">
+            <nav class="bg-black text-white h-14">
+                <ul class="flex flex-row flex-wrap items-center align-middle justify-center text-sm text-nowrap py-auto h-full">
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-4 {{ (request()->is('/')) ? '' : 'hover:bg-teal-300' }}">
                         <a href="/"><p class=py-2>STRONA GŁÓWNA</p></a>
                     </li>
 
                     <li x-data="{open: false}" @mouseover="open = true" @mouseout="open = false"
-                        class="z-50 relative box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400">
+                        class="z-50 relative box-border cursor-pointer transform duration-300 h-full flex items-center px-2
+                        {{ (request()->is('o-fundacji', 'statut-fundacji', 'zarzad-fundacji', 'cele-i-zasady-dzialania', 'dzialalnosc-gospodarcza', 'sprawozdania')) ? '' : 'hover:bg-teal-300' }}">
                         <span class="inline-flex items-center">
                             <a href="/o-fundacji">O FUNDACJI</a> <svg class="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
@@ -48,66 +55,49 @@
                         </span>
 
                         <!-- Dropdown menu -->
-                        <div x-show="open" x-transition:enter="transition ease-out duration-400"
-                            x-transition:enter-start="opacity-0 -translate-x-6"
-                            x-transition:enter-end="opacity-100"
-                            x-transition:leave="transition ease-in duration-400"
-                            x-transition:leave-start="opacity-100"
-                            x-transition:leave-end="opacity-0 -translate-x-6"
-                            class="absolute top-10 left-0 z-50 bg-teal-400 divide-y divide-teal-100 min-w-48">
-                            <ul class="text-xs text-gray-700 dark:text-gray-200">
-                                <li>
-                                    <a href="/statut-fundacji" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class=py-2>STATUT FUNDACJI</p></a>
-                                </li>
-                                <li>
-                                    <a href="/zarzad-fundacji" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class=py-2>ZARZĄD FUNDACJI</p></a>
-                                </li>
-                                <li>
-                                    <a href="/cele-i-zasady-dzialania" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class=py-2>CELE I ZASADY DZIAŁANIA</p></a>
-                                </li>
-                                <li>
-                                    <a href="/dzialalnosc-gospodarcza" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class=py-2>DZIAŁALNOŚĆ GOSPODARCZA</p></a>
-                                </li>
-                                <li>
-                                    <a href="/sprawozdania" class="z-50 block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class=py-2>SPRAWOZDANIA</p></a>
-                                </li>
-                                </ul>
-                        </div>
+                        <x-dropdown>
+                            <li>
+                                <a href="/statut-fundacji" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">STATUT FUNDACJI</p></a>
+                            </li>
+                            <li>
+                                <a href="/zarzad-fundacji" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">ZARZĄD FUNDACJI</p></a>
+                            </li>
+                            <li>
+                                <a href="/cele-i-zasady-dzialania" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">CELE I ZASADY DZIAŁANIA</p></a>
+                            </li>
+                            <li>
+                                <a href="/dzialalnosc-gospodarcza" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">DZIAŁALNOŚĆ GOSPODARCZA</p></a>
+                            </li>
+                            <li>
+                                <a href="/sprawozdania" class="z-50 block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">SPRAWOZDANIA</p></a>
+                            </li>
+                        </x-dropdown>
                     </li>
 
                     <li x-data="{open: false}" @mouseover="open = true" @mouseout="open = false"
-                        class="z-50 relative box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400">
+                        class="z-50 relative box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-300">
                         <span class="inline-flex items-center">
                             PRACOWNICY FUNDACJI <svg class="w-2.5 h-2.5 ms-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                             </svg>
                         </span>
 
-                        <!-- Dropdown menu -->
-                        <div x-show="open" x-transition:enter="z-10 transition ease-out duration-400"
-                            x-transition:enter-start="opacity-0 -translate-x-6"
-                            x-transition:enter-end="opacity-100"
-                            x-transition:leave="transition ease-in duration-400"
-                            x-transition:leave-start="opacity-100"
-                            x-transition:leave-end="opacity-0 -translate-x-6"
-                            class="absolute top-10 left-0 z-10 bg-teal-400 divide-y divide-teal-100 min-w-48">
-                            <ul class="text-xs text-gray-700 dark:text-gray-200">
+                        <x-dropdown>
                             <li>
-                                <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">SPECJALIŚCI FUNDACJI</a>
+                                <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">SPECJALIŚCI FUNDACJI</p></a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">REDAKCJA PROTALU GLOSWSCHODU</a>
+                                <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300"><p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p></a>
                             </li>
-                            </ul>
-                        </div>
+                        </x-dropdown>
                     </li>
 
 
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><a href="/praktyki"><p class=py-2>PRAKTYKI</p></a></li>
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><p class=py-2>PROJEKTY</p></li>
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><p class=py-2>AKTUALNOŚCI</p></li>
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('praktyki')) ? '' : 'hover:bg-teal-300' }}"><a href="/praktyki"><p class=py-2>PRAKTYKI</p></a></li>
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('/projekty')) ? '' : 'hover:bg-teal-300' }}"><a href="/projekty"><p class=py-2>PROJEKTY</p></a></li>
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('/aktualnosci')) ? '' : 'hover:bg-teal-300' }}"><a href="/aktualnosci"><p class=py-2>AKTUALNOŚCI</p></a></li>
                     <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><p class=py-2>GALERIA</p></li>
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><p class=py-2>KONTAKT</p></li>
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('kontakt')) ? '' : 'hover:bg-teal-300' }}"><a href="/kontakt"><p class=py-2>KONTAKT</p></a></li>
                 </ul>
             </nav>
         </div>

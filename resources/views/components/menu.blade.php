@@ -6,12 +6,12 @@
                 <br>
                 <div>
                     <ul class="space-y-2 text-blue-700">
-                        <li><a href="/o-fundacji">O fundacji</a></li>
-                        <li><a href="/zarzad-fundacji">Zarząd fundacji</a></li>
-                        <li><a href="/statut-fundacji">Statut fundacji</a></li>
-                        <li><a href="/cele-i-zasady-dzialania">Cele i zasady działania</a></li>
-                        <li><a href="/dzialalnosc-gospodarcza">Działalność gospodarcza</a></li>
-                        <li><a href="/sprawozdania">Sprawozdania</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/o-fundacji">O fundacji</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/zarzad-fundacji">Zarząd fundacji</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/statut-fundacji">Statut fundacji</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/cele-i-zasady-dzialania">Cele i zasady działania</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/dzialalnosc-gospodarcza">Działalność gospodarcza</a></li>
+                        <li class="transformation duration-200 hover:text-red-400"><a href="/sprawozdania">Sprawozdania</a></li>
                     </ul>
                 </div>
             </div>
@@ -28,7 +28,11 @@
                 <h3><span class="border-b border-b-black px-4 pb-2">Aktualności</span></h3>
                 <br>
                 <div>
-
+                    <ul class="space-y-2 text-blue-700">
+                        @foreach ($aktualnosci as $post)
+                            <li class="transformation duration-200 hover:text-red-400"><a href="/posts/{{$post->slug}}">{{$post->title}}</a></li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>

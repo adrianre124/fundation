@@ -30,18 +30,17 @@ class PracticeController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePracticeRequest $request)
+    public function store()
     {
         $attributes = request()->validate([
             'title' => 'required',
-            'slug' => ['required', Rule::unique('practices', 'slug')],
             'thumbnail' => 'image',
             'description' => 'required',
             'duties' => 'required',
             'tools' => 'required'
         ]);
 
-        //$attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+        $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
 
         Practice::create($attributes);
 

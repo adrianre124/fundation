@@ -1,4 +1,10 @@
-<x-layout>
+@php
+    $title = 'Praktyki';
+    $route = ["Praktyki"]
+@endphp
+
+<x-layout :title="$title">
+    <x-route :route="$route"/>
     <main class="flex mx-20 px-20">
         <x-menu />
         <div class="my-20">
@@ -49,105 +55,9 @@
                                 <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
                                     <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
                                         href="/praktyki/{{ $praktyka->slug }}/"
-                                        title=""><h1 class="py-4">{{ $praktyka->slug }}</h1></a>
+                                        title=""><h1 class="py-4">{{ $praktyka->title }}</h1></a>
                                 </div>
                             @endforeach
-                            {{-- <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Dziennikarz</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Wschodoznastwo</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Stosunki Międzynarodowe</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Tłumacz</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Europeistyka</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-green-400 text-center text-white hover:bg-green-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Europeistyka</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-green-400 text-center text-white hover:bg-green-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Informatyk</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-green-400 text-center text-white hover:bg-green-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Marketing Internetowy</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-green-400 text-center text-white hover:bg-green-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Grafik</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-green-400 text-center text-white hover:bg-green-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">SEO Copywriter</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-purple-400 text-center text-white hover:bg-purple-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Copywriter</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-purple-400 text-center text-white hover:bg-purple-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Specjalista ds. social media</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-purple-400 text-center text-white hover:bg-purple-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Marketing Polityczny</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-purple-400 text-center text-white hover:bg-purple-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Specjalista ds. Hr</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-purple-400 text-center text-white hover:bg-purple-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Zarządzanie / Zarządanie w Biznesie</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-red-400 text-center text-white hover:bg-red-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Administracja</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-red-400 text-center text-white hover:bg-red-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Redaktor</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-red-400 text-center text-white hover:bg-red-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Prawo</h1></a>
-                            </div>
-                            <div class="block w-full rounded bg-yellow-400 text-center text-white hover:bg-yellow-500">
-                                <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="https://fundacjaglosmlodych.org/praktyki/dziennikarz/"
-                                    title=""><h1 class="py-4">Księgowość</h1></a>
-                            </div> --}}
-
                             <div class="wpb_single_image wpb_content_element vc_align_left">
 
                                 <figure class="wpb_wrapper vc_figure">

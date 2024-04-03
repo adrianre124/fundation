@@ -6,7 +6,7 @@
                 <div class="relative h-56 max-width-full overflow-hidden md:h-96">
                     <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="./images/19.png" class="absolute block -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Wśród celów statutowych Fundacji znajdują się:">
+                        <img src="./images/19.png" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Wśród celów statutowych Fundacji znajdują się:">
                         <div class="flex-col justify-center align-center absolute text-white text-center h-full w-full mt-8">
                             <h2 class="text-3xl font-semibold w-11/12 m-auto text-shadow shadow-gray-400"
                                 x-transition:enter="transition ease-out duration-400"
@@ -203,67 +203,21 @@
                 <div>
                     <h1 class="text-center text-3xl font-bold">Aktualności</h1>
 
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
+                    @foreach ($aktualnosci as $post)
+                        <x-post :post="$post"/>
+                    @endforeach
 
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="#">Zobacz Wszystkie</a></div>
+                    <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="/aktualnosci">Zobacz Wszystkie</a></div>
                 </div>
 
                 <div>
                     <h1 class="text-center text-3xl font-bold">Projekty</h1>
 
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
+                    @foreach ($projects as $project)
+                        <x-post :post="$project"/>
+                    @endforeach
 
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
-
-                    <div class="flex flex-col items-center w-full bg-white md:flex-row">
-                        <img class="object-cover w-full h-96 md:h-auto md:w-48" src="/images/o1.png" alt="">
-                        <div class="flex flex-col justify-between w-full p-4 leading-normal">
-                            <h5 class="mb-2 font-bold tracking-tight">PressGlobal.pl -Nowy innowacyjny serwis informacyjny.</h5>
-                            <p class="mb-3 text-xs font-normal">Należy podkreślić, że Fundacja nie zrezygnowała z prowadzenia portalu informacyjnego, a wręcz przeciwnie - w wyniku przekazania portalu plportal.pl powstał zupełnie nowy serwis informacyjny o nazwie PressGlobal.pl. Projekt ten został sfinansowany ze środków własnych Fundacji, ...</p>
-                            <a href="#" class="block bg-sky-400 text-white text-center w-24 py-1">Czytaj Dalej</a>
-                        </div>
-                    </div>
-
-                    <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="#">Zobacz Wszystkie</a></div>
+                    <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="/projekty">Zobacz Wszystkie</a></div>
                 </div>
             </div>
         </section>

@@ -17,7 +17,6 @@ class PracticeFactory extends Factory
     public function definition(): array
     {
         return [
-            'slug' => $this->faker->slug,
             'title' => $this->faker->sentence(),
             'description' => '<p>' . implode('</p><p>', $this->faker->paragraphs(3)) . '</p>',
             'duties' => '<li>' . implode('</li><li>', $this->faker->sentences(5)) . '</li>',

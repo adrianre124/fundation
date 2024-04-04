@@ -41,6 +41,8 @@ Route::get('/projekty', fn() => view('posts.index', [
         $q->where('name','like', 'illum');
     })->paginate(6)->withQueryString()
 ]));
+Route::get('/galeria', fn() => view('galeria'));
+
 Route::get('/kontakt', [ContactController::class, 'show']);
 Route::post('/kontakt', [ContactController::class,'sendEmail']);
 

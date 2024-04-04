@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <div class="mb-8">
+            <div class="mb-8 max-w-[300px]">
                 <h3><span class="border-b border-b-black px-4 pb-2">Aktualności</span></h3>
                 <br>
                 <div>

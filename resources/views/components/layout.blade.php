@@ -96,7 +96,7 @@
                     <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('praktyki')) ? '' : 'hover:bg-teal-300' }}"><a href="/praktyki"><p class=py-2>PRAKTYKI</p></a></li>
                     <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('/projekty')) ? '' : 'hover:bg-teal-300' }}"><a href="/projekty"><p class=py-2>PROJEKTY</p></a></li>
                     <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('/aktualnosci')) ? '' : 'hover:bg-teal-300' }}"><a href="/aktualnosci"><p class=py-2>AKTUALNOŚCI</p></a></li>
-                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><p class=py-2>GALERIA</p></li>
+                    <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 hover:bg-teal-400"><a href="/galeria"><p class=py-2>GALERIA</p></a></li>
                     <li class="box-border cursor-pointer transform duration-300 h-full flex items-center px-2 {{ (request()->is('kontakt')) ? '' : 'hover:bg-teal-300' }}"><a href="/kontakt"><p class=py-2>KONTAKT</p></a></li>
                 </ul>
             </nav>

@@ -23,7 +23,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         View::share('aktualnosci', Post::whereHas('category', function($q) {
-            $q->where('name','like', 'asperiores');
+            $q->where('name','like', 'Aktualnosci');
         })->limit(3)->get());
     }
 }

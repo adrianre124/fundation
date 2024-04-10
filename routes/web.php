@@ -7,7 +7,6 @@ use App\Http\Controllers\CategoryController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,11 +18,11 @@ use App\Models\Post;
 |
 */
 
-Route::get('/', fn() => view('welcome', [
-    'projects' => Post::whereHas('category', function($q) {
-        $q->where('name','like', 'illum');
-    })->limit(3)->get()
-]));
+Route::get('/', function() {
+    return view('welcome', ['projects' => Post::whereHas('category', function($q) {
+        $q->where('name','like', 'Projekty');
+    })->limit(3)->get()]);
+});
 
 Route::get('statut-fundacji', fn() => view('statut-fundacji'));
 Route::get('zarzad-fundacji', fn() => view('zarzad-fundacji'));
@@ -33,12 +32,12 @@ Route::get('dzialalnosc-gospodarcza', fn() => view('dzialalnosc-gospodarcza'));
 Route::get('/aktualnosci', [PostController::class, 'index']);
 Route::get('/sprawozdania', fn() => view('sprawozdania', [
     'posts' => Post::whereHas('category', function($q) {
-        $q->where('name','like', 'laboriosam');
+        $q->where('name','like', 'Sprawozdania');
     })->paginate(6)->withQueryString()
 ]));
 Route::get('/projekty', fn() => view('posts.index', [
     'posts' => Post::whereHas('category', function($q) {
-        $q->where('name','like', 'illum');
+        $q->where('name','like', 'Projekty');
     })->paginate(6)->withQueryString()
 ]));
 Route::get('/galeria', fn() => view('galeria'));

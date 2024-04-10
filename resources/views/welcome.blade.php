@@ -1,3 +1,7 @@
+@php
+
+@endphp
+
 <x-layout>
     <main>
         <section class="w-full h-auto cursor-pointer">

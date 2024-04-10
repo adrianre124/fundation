@@ -5,16 +5,14 @@
 
 <x-layout :title="$title">
     <x-route :route="$route"/>
-    <main class="flex mx-20 px-20">
+    <main class="flex mx-20">
         <x-menu/>
-        <div class="grid grid-cols-2 my-2 space-x-2 space-y-2 wrap">
+        <div class="flex flex-wrap my-2 gap-2">
             @foreach ($posts as $post)
-                <div class="border shadow-lg transition duration-300 hover:shadow-2xl">
-                    <x-post :post="$post"/>
-                </div>
+                <x-post :post="$post"/>
             @endforeach
 
-            <div class="col-start-1 col-span-2 text-white">
+            <div class="flex-start text-white w-full">
                 {{ $posts->links("pagination::tailwind") }}
             </div>
         </div>

@@ -1,6 +1,6 @@
 <div class="relative w-[300px] h-[200px] overflow-hidden">
     <div x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false" class="tranform duration-500 hover:scale-110">
-        <img src="{{ $src }}" alt="" class="w-[300px] h-[200px]">
+        <img src="{{ $src }}" alt="" class="min-w-[200px] min-h-[150px] w-[300px] h-[200px] object-cover">
         <div x-show="open"
             x-transition:enter="transition linear duration-500"
             x-transition:enter-start="opacity-0"

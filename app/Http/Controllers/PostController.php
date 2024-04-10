@@ -2,18 +2,27 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
+use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use App\Models\Post;
 
 class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
+        if ($request->is('sprawozdania')) {
+            $posts = Post::whereHas('category', function($q) {
+                $q->where('name','like', 'Sprawozdania');
+            })->paginate(6)->withQueryString();
+
+            return view('sprawozdania', ['posts' => $posts]);
+        }
+
         return view('posts.index', [
             'posts' => Post::latest()->paginate(6)->withQueryString(),
         ]);

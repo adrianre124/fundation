@@ -1,6 +1,6 @@
 <div>
     <aside class="min-w-[300px] mx-auto mt-2">
-        <div>
+        <div class="mx-auto">
             <div class="mb-8">
                 <h3><span class="border-b border-b-black px-4 pb-2">O fundacji</span></h3>
                 <br>
@@ -20,11 +20,11 @@
                 <h3><span class="border-b border-b-black px-4 pb-2">Polub nas na FB</span></h3>
                 <br>
                 <div>
-
+                    <!--TODO POLUB NAS NA FACEBOOKU-->
                 </div>
             </div>
 
-            <div class="mb-8 max-w-[300px]">
+            <div class="mb-8 max-w-[250px]">
                 <h3><span class="border-b border-b-black px-4 pb-2">Aktualności</span></h3>
                 <br>
                 <div>

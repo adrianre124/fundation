@@ -13,9 +13,14 @@
             <h1 class="text-3xl text-center text-blue-600 font-semibold">{{ $practice->title }} - Praktyki</h1>
             <div>{!! $practice->description !!}</div>
 
+            @if (isset($practice->thumbnail))
             <div>
-                <img src="{{ asset('storage/' . $practice->thumbnail) }}" alt="">
+                <!--
+                    <img src="{{ asset('storage/' . $practice->thumbnail) }}" alt="">
+                -->
+                <img src="../../images/practices/{{$practice->thumbnail }}" alt="">
             </div>
+            @endif
 
             <div>
                 <h2 class="mb-10 text-lg"><strong>Obowiązki:</strong></h2>
@@ -34,7 +39,7 @@
             <div class="wpb_single_image wpb_content_element vc_align_left">
 
                 <figure class="wpb_wrapper vc_figure">
-                    <a href="https://fundacjaglosmlodych.org/praktyki" target="_blank"
+                    <a href="/praktyki" target="_blank"
                         class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high"
                             decoding="async" class="vc_single_image-img "
                             src="https://fundacjaglosmlodych.org/wp-content/uploads/2021/04/infografika_inny_font.png"

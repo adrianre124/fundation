@@ -19,6 +19,7 @@ class PracticeFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'description' => '<p>' . implode('</p><p>', $this->faker->paragraphs(3)) . '</p>',
+            'thumbnail' => $this->faker->image('public/images/practices', 1200, 630, null, false),
             'duties' => '<li>' . implode('</li><li>', $this->faker->sentences(5)) . '</li>',
             'tools' => '<li>' . implode('</li><li>', $this->faker->sentences(6)) . '</li>',
         ];

@@ -24,6 +24,6 @@ class AppServiceProvider extends ServiceProvider
     {
         View::share('aktualnosci', Post::whereHas('category', function($q) {
             $q->where('name','like', 'Aktualnosci');
-        })->limit(3)->get());
+        })->orderBy('created_at', 'desc')->limit(3)->get());
     }
 }

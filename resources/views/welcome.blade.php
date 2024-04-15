@@ -203,22 +203,22 @@
         </section>
 
         <section>
-            <div class="grid grid-cols-2 w-10/12 mx-auto my-8">
-                <div>
+            <div class="grid grid-cols-2 items-start w-10/12 mx-auto my-8">
+                <div class="space-x-2 flex flex-col">
                     <h1 class="text-center text-3xl font-bold">Aktualności</h1>
 
                     @foreach ($aktualnosci as $post)
-                        <x-post :post="$post"/>
+                        <x-welcome-post :post="$post"/>
                     @endforeach
 
                     <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="/aktualnosci">Zobacz Wszystkie</a></div>
                 </div>
 
-                <div>
+                <div class="space-x-2 flex flex-col">
                     <h1 class="text-center text-3xl font-bold">Projekty</h1>
 
                     @foreach ($projects as $project)
-                        <x-post :post="$project"/>
+                        <x-welcome-post :post="$project"/>
                     @endforeach
 
                     <div class="mt-4 text-center text-lg font-semibold text-blue-600"><a href="/projekty">Zobacz Wszystkie</a></div>

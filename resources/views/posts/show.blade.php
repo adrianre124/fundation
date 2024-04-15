@@ -16,7 +16,7 @@
                 <span class="text-gray-300"><i class="fa-solid fa-folder-open mx-2"></i><a href="/category/{{ $post->category->name }}">{{ $post->category->name }}</a></span>
                 <hr/>
             </div>
-            <div class="text-lg px-10">{!! $post->body !!}</div>
+            <div class="text-lg px-10"><p class="break-all">{!! $post->body !!}</p></div>
             <div class="flex row font-semibold">
                 <div class="{{!isset($previous_record) ? 'hidden' : ''}}bg-gray-100 w-1/2 h-12 leading-[48px] text-left text-blue-600 transition duration-300 hover:bg-blue-600 hover:text-white">
                     @if (isset($previous_record))
@@ -42,6 +42,14 @@
                         </a>
                     @endif
                 </div>
+            </div>
+            <div class="mb-10 bg-red-400 text-white p-4 text-center w-40 mx-auto">
+                <form method="POST" action="/posts/{{ $post->id }}">
+                    @csrf
+                    @method('DELETE')
+
+                    <button class="text-white">Delete Post</button>
+                </form>
             </div>
         </div>
     </main>

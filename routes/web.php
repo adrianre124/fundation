@@ -53,5 +53,6 @@ Route::get('/praktyki', [PracticeController::class, 'index']);
 Route::post('praktyki', [PracticeController::class, 'store']);
 
 Route::get('/posts/create', [PostController::class, 'create']);
+Route::delete('posts/{post}', [PostController::class, 'destroy']);
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::post('/posts', [PostController::class, 'store']);

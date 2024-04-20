@@ -1,4 +1,4 @@
-<div>
+<div class="hidden lg:block">
     <aside class="min-w-[300px] mx-auto mt-2">
         <div class="mx-auto">
             <div class="mb-8">

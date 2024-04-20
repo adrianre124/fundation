@@ -5,8 +5,8 @@
 
 <x-layout :title="$title">
     <x-route :route="$route"/>
-    <main class="flex my-10 justify-center space-x-8">
-        <div class="w-4/12">
+    <main class="flex flex-col md:flex-row my-10 justify-center space-x-8">
+        <div class="lg:w-4/12">
             <div class="flex flex-row items-center">
                 <div class="grow-0 text-xs">Kontakt</div>
                 <div class="grow h-[1px] bg-gray-200"></div>
@@ -39,7 +39,7 @@
             </div>
         </div>
 
-        <div class="w-4/12">
+        <div class="lg:w-4/12">
             <div class="flex flex-row items-center">
                 <div class="grow-0 text-xs">Formularz Kontaktowy</div>
                 <div class="grow h-[1px] bg-gray-200"></div>
@@ -66,7 +66,7 @@
         </div>
     </main>
 
-    <div class="my-10 w-10/12 bg-gray-700 mx-auto text-center text-white">
+    <div class="lg:my-10 lg:w-10/12 bg-gray-700 mx-auto text-center text-white">
         <hr>
             <div class="w-full space-y-4 my-8">
                 <h1 class="font-semibold text-lg">Dołącz do nas!</h1>

@@ -7,7 +7,7 @@
         <hr class="my-2"/>
         <p class="mb-3 font-normal break-all">{!! Str::limit($post->body, 240) !!}</p>
     </div>
-    <p class="flex-end flex mb-2 mr-2"><a href="posts/{{ $post->slug }}" class="block bg-sky-400 text-white text-center w-24 py-1 transition duration-200 hover:bg-sky-500">Czytaj Dalej</a></p>
+    <p class="flex-end flex mb-2 mx-2"><a href="posts/{{ $post->slug }}" class="block bg-sky-400 text-white text-center w-24 py-1 transition duration-200 hover:bg-sky-500">Czytaj Dalej</a></p>
 </div>
 
 

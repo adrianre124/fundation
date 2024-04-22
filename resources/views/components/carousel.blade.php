@@ -48,10 +48,10 @@
                         niepełnosprawnych.</x-carousel.list-item>
                 </x-carousel.list>
             </x-carousel.item>
+            <!-- Slider controls -->
+            <x-carousel.slider-controls />
+            <!-- Slider indicators -->
+            <x-carousel.slider />
         </x-wrapper>
-        <!-- Slider indicators -->
-        <x-carousel.slider />
-        <!-- Slider controls -->
-        <x-carousel.slider-controls />
     </div>
 </section>

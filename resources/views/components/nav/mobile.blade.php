@@ -28,7 +28,7 @@
             </x-nav.mobile-dropdown>
         </li>
 
-        <li x-data="{ open: false }" @click="open = !open" @mouseover="open = true" @mouseout="open = false"
+        {{-- <li x-data="{ open: false }" @click="open = !open" @mouseover="open = true" @mouseout="open = false"
             class="z-50 relative box-border cursor-pointer transform duration-300 w-full grow h-full items-center">
             <span class="block w-full">
                 <a :href="open ? '#' : 'javascript:void(0)'" class="inline-block py-4 h-full w-11/12"><span class="text-sm px-2">PRACOWNICY FUNDACJI</span></a>
@@ -39,7 +39,7 @@
                 <x-nav.dropdown-item route="#">SPECJALIŚCI FUNDACJI</x-nav.dropdown-item>
                 <x-nav.dropdown-item route="#">REDAKCJA PROTALU GLOSWSCHOD</x-nav.dropdown-item>
             </x-nav.mobile-dropdown>
-        </li>
+        </li> --}}
 
 
         <x-nav.list-item route="/praktyki" name="PRAKTYKI" />

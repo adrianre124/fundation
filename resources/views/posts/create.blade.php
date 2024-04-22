@@ -18,6 +18,6 @@
 
         <x-form.textarea name='body'/>
 
-        <x-form.button>Publish</x-form.button>
+        <x-form.button>Stwórz</x-form.button>
     </form>
 </x-layout>

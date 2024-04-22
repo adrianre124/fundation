@@ -53,7 +53,9 @@
                     <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
                         class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full
                         {{ request()->is('o-fundacji', 'statut-fundacji', 'zarzad-fundacji', 'cele-i-zasady-dzialania', 'dzialalnosc-gospodarcza', 'sprawozdania') ? '' : 'hover:bg-teal-300' }}">
-                            <a href="/o-fundacji" class="block py-2 w-full h-full"><p class="py-2 px-2">O FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p></a>
+                        <a href="/o-fundacji" class="block py-2 w-full h-full">
+                            <p class="py-2 px-2">O FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                        </a>
 
                         <!-- Dropdown menu -->
                         <x-dropdown>
@@ -67,23 +69,25 @@
                         </x-dropdown>
                     </li>
 
-                    <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
+                    {{-- <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
                         class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full hover:bg-teal-300">
-                            <a href="/#" class="block py-2 w-full h-full"><p class="py-2 px-2">PRACOWNICY FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p></a>
+                        <a href="/#" class="block py-2 w-full h-full">
+                            <p class="py-2 px-2">PRACOWNICY FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                        </a>
 
                         <x-dropdown>
-                    <li>
-                        <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
-                            <p class="py-2">SPECJALIŚCI FUNDACJI</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
-                            <p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p>
-                        </a>
-                    </li>
-                    </x-dropdown>
-                    </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
+                                <p class="py-2">SPECJALIŚCI FUNDACJI</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
+                                <p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p>
+                            </a>
+                        </li>
+                        </x-dropdown>
+                    </li> --}}
 
 
                     <x-nav.list-item route="/praktyki" name="PRAKTYKI" />

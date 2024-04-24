@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 use App\Models\Practice;
 use App\Models\Post;
 use App\Models\Category;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,7 +23,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Practice::factory(19)->create();
-        Post::factory(20)->create();
+            User::create(['name' => 'Admin', 'email' => 'admin@example.com', 'password' => bcrypt('password'), 'is_admin' => 1]);
+            Category::create(['name' => 'Aktualnosci']);
+            Category::create(['name' => 'Sprawozdania']);
+            Category::create(['name' => 'Projekty']);
+            Practice::factory(19)->create();
+            Post::factory(20)->create();
     }
 }

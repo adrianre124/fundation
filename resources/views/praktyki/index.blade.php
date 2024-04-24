@@ -67,11 +67,13 @@
                             </figure>
                         </div>
 
-                        <div class="mb-10 bg-cyan-400 text-white p-4 text-center">
-                            <a href="/praktyki/create">
-                                <p>Dodaj Praktyki</p>
-                            </a>
-                        </div>
+                        @auth
+                            <div class="mb-10 bg-cyan-400 text-white p-4 text-center">
+                                <a href="/praktyki/create">
+                                    <p>Dodaj Praktyki</p>
+                                </a>
+                            </div>
+                        @endauth
 
                         <div style="clear:both;"></div>
                     </div>

@@ -14,6 +14,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "@ckeditor/ckeditor5-build-decoupled-document": "^41.3.1",
+        "@ckeditor/ckeditor5-upload": "^41.3.1",
         "@fortawesome/fontawesome-free": "^6.5.1"
     }
 }

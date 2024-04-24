@@ -49,6 +49,7 @@
                 @endif
             </div>
         </div>
+        @auth
         <div class="mb-10 bg-red-400 text-white p-4 text-center w-40 mx-auto">
             <form method="POST" action="/posts/{{ $post->id }}">
                 @csrf
@@ -57,5 +58,6 @@
                 <button class="text-white">Delete Post</button>
             </form>
         </div>
+        @endauth
     </div>
 </x-main>

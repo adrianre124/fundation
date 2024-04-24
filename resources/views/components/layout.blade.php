@@ -1,6 +1,7 @@
 <!doctype html>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>
     @isset($title)
         {{ $title }} -
@@ -15,8 +16,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 <script src="https://kit.fontawesome.com/d96bec4722.js" crossorigin="anonymous"></script>
+<script src="{{ asset('assets/vendor/ckeditor5/build/ckeditor.js') }}" type="text/javascript"></script>
 <script src="https://cdn.tailwindcss.com"></script>
-@vite('resources/css/app.css')
+{{-- @vite('resources/css/app.css') --}}
 <style>
     html {
         scroll-behavior: smooth;

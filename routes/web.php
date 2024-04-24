@@ -4,6 +4,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\UserController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
@@ -22,7 +23,7 @@ Route::get('/', function() {
     return view('welcome', ['projects' => Post::whereHas('category', function($q) {
         $q->where('name','like', 'Projekty');
     })->limit(3)->get()]);
-});
+})->name('/home');
 
 Route::get('statut-fundacji', fn() => view('statut-fundacji'));
 Route::get('zarzad-fundacji', fn() => view('zarzad-fundacji'));
@@ -47,12 +48,17 @@ Route::post('/kontakt', [ContactController::class,'sendEmail']);
 
 Route::get('/category/{category:name}', [CategoryController::class, 'show']);
 
-Route::get('praktyki/create', [PracticeController::class, 'create']);
+Route::get('praktyki/create', [PracticeController::class, 'create'])->middleware('auth');
 Route::get('praktyki/{practice:slug}', [PracticeController::class, 'show']);
 Route::get('/praktyki', [PracticeController::class, 'index']);
-Route::post('praktyki', [PracticeController::class, 'store']);
+Route::post('praktyki', [PracticeController::class, 'store'])->middleware('auth');
 
-Route::get('/posts/create', [PostController::class, 'create']);
-Route::delete('posts/{post}', [PostController::class, 'destroy']);
+Route::get('/posts/create', [PostController::class, 'create'])->middleware('auth');
+Route::delete('posts/{post}', [PostController::class, 'destroy'])->middleware('auth');
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
-Route::post('/posts', [PostController::class, 'store']);
+Route::post('/posts', [PostController::class, 'store'])->middleware('auth');
+
+Route::post('/upload', [PostController::class, 'upload'])->name('ckeditor.upload');
+
+Route::get('/admin', [UserController::class, 'index'])->middleware('guest');
+Route::post('/admin', [UserController::class, 'login'])->middleware('guest');

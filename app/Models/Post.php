@@ -4,11 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\File;
 use Spatie\Sluggable\HasSlug;
 use Spatie\Sluggable\SlugOptions;
 
 /**
- * 
+ *
  *
  * @property int $id
  * @property int $category_id
@@ -51,5 +52,16 @@ class Post extends Model
         return SlugOptions::create()
             ->generateSlugsFrom('title')
             ->saveSlugsTo('slug');
+    }
+
+    public function delete()
+    {
+        $filePath = public_path('storage/' . $this->thumbnail);
+
+        if (File::exists($filePath)) {
+            File::delete($filePath);
+        }
+
+        parent::delete();
     }
 }

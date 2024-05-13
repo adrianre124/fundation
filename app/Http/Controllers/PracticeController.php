@@ -60,17 +60,44 @@ class PracticeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Practice $practice)
+    public function edit($id)
     {
-        //
+        $practice = Practice::find($id);
+        return view('praktyki.edit', compact('practice'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePracticeRequest $request, Practice $practice)
+    public function update($id)
     {
-        //
+        $attributes = request()->validate([
+            'title' => 'required',
+            'thumbnail' => 'image',
+            'description' => 'required',
+            'duties' => 'required',
+            'tools' => 'required'
+        ]);
+
+        $practice = Practice::find($id);
+
+        if (!empty(request()->file())) {
+            $path = public_path().'/storage/';
+
+            if ($practice->thumbnail != '' && $practice->thumbnail != null) {
+                $file_old = $path.$practice->thumbnail;
+                unlink($file_old);
+            }
+
+            $attributes['thumbnail'] = request()->file('thumbnail')->store('storage/thumbnails');
+        }
+        else {
+            $attributes['thumbnail'] = $practice->thumbnail;
+        }
+
+        $practice->update($attributes);
+        return redirect()->route('practice.index')
+            ->with('success', 'Post updated successfully.');
     }
 
     /**
@@ -78,6 +105,8 @@ class PracticeController extends Controller
      */
     public function destroy(Practice $practice)
     {
-        //
+        $practice->delete();
+
+        return redirect('/praktyki');
     }
 }

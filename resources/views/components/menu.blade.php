@@ -20,7 +20,7 @@
                 <h3><span class="border-b border-b-black px-4 pb-2">Polub nas na FB</span></h3>
                 <br>
                 <div>
-                    <!--TODO POLUB NAS NA FACEBOOKU-->
+                    <div class="fb-page" data-href="https://www.facebook.com/Fundacja.Glos.Mlodych" data-tabs="timeline" data-width="240" data-height="130" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/Fundacja.Glos.Mlodych" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/Fundacja.Glos.Mlodych">Fundacja na rzecz promocji i rozwoju Głos Młodych</a></blockquote></div>
                 </div>
             </div>
 
@@ -38,3 +38,5 @@
         </div>
     </aside>
 </div>
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v19.0" nonce="7HaqFgLa"></script>

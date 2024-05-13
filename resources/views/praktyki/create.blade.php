@@ -9,6 +9,22 @@
             <x-form.textarea name='tools' placeholder="Tools"/>
 
 
-            <x-form.button>Publish</x-form.button>
+            <x-form.button>Stwórz</x-form.button>
         </form>
 </x-layout>
+
+<script>
+    var allEditors = document.querySelectorAll('.editor');
+    console.log(allEditors);
+    for (var i = 0; i < allEditors.length; ++i) {
+        ClassicEditor
+        .create( allEditors[i], {
+            ckfinder: {
+                'uploadUrl': "{{route('ckeditor.upload',['_token'=>csrf_token()])}}",
+            }
+        })
+        .catch( error => {
+            console.error( error );
+        } );
+    }
+</script>

@@ -76,15 +76,43 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view('posts.edit', [
+            "post" => $post
+        ]);
+
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update($id)
     {
-        //
+        $attributes = request()->validate([
+            'category_id' => ['required', Rule::exists('categories', 'id')],
+            'title' => 'required',
+            'body' => 'required',
+            'thumbnail' => 'image',
+        ]);
+
+        $post = Post::find($id);
+
+        if (!empty(request()->file())) {
+            $path = public_path().'/storage/';
+
+            if ($post->thumbnail != '' && $post->thumbnail != null) {
+                $file_old = $path.$post->thumbnail;
+                unlink($file_old);
+            }
+
+            $attributes['thumbnail'] = request()->file('thumbnail')->store('storage/thumbnails');
+        }
+        else {
+            $attributes['thumbnail'] = $post->thumbnail;
+        }
+
+        $post->update($attributes);
+        return redirect()->route('post.index')
+            ->with('success', 'Post updated successfully.');
     }
 
     /**

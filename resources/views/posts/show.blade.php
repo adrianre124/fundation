@@ -14,8 +14,8 @@
                     href="/category/{{ $post->category->name }}">{{ $post->category->name }}</a></span>
             <hr />
         </div>
-        <div class="text-lg px-10">
-            <p class="break-all">{!! $post->body !!}</p>
+        <div class="px-10">
+            {!! $post->body !!}
         </div>
         <div class="flex row font-semibold">
             <div
@@ -50,13 +50,20 @@
             </div>
         </div>
         @auth
-        <div class="mb-10 bg-red-400 text-white p-4 text-center w-40 mx-auto">
-            <form method="POST" action="/posts/{{ $post->id }}">
-                @csrf
-                @method('DELETE')
+        <div class="flex flex-col md:flex-row justify-center">
+            <div
+                class="mb-10 bg-blue-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-cyan-600">
+                <a href="/posts/edit/{{ $post->id }}" class="inline-block w-40 h-10 leading-10">Edytuj</a>
+            </div>
 
-                <button class="text-white">Delete Post</button>
-            </form>
+            <div class="mb-10 bg-red-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-red-600">
+                <form method="POST" action="/posts/{{ $post->id }}">
+                    @csrf
+                    @method('DELETE')
+
+                    <button class="inline-block text-white w-40 h-10">Usuń</button>
+                </form>
+            </div>
         </div>
         @endauth
     </div>

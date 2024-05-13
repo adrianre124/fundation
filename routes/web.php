@@ -30,7 +30,7 @@ Route::get('zarzad-fundacji', fn() => view('zarzad-fundacji'));
 Route::get('o-fundacji', fn() => view('o-fundacji'));
 Route::get('cele-i-zasady-dzialania', fn() => view('cele-i-zasady-dzialania'));
 Route::get('dzialalnosc-gospodarcza', fn() => view('dzialalnosc-gospodarcza'));
-Route::get('/aktualnosci', [PostController::class, 'index']);
+Route::get('/aktualnosci', [PostController::class, 'index'])->name('post.index');
 Route::get('/sprawozdania', fn() => view('sprawozdania', [
     'posts' => Post::whereHas('category', function($q) {
         $q->where('name','like', 'Sprawozdania');
@@ -49,13 +49,18 @@ Route::post('/kontakt', [ContactController::class,'sendEmail']);
 Route::get('/category/{category:name}', [CategoryController::class, 'show']);
 
 Route::get('praktyki/create', [PracticeController::class, 'create'])->middleware('auth');
+Route::delete('praktyki/{practice}', [PracticeController::class, 'destroy'])->middleware('auth');
+Route::put('praktyki/{practice}', [PracticeController::class, 'update'])->middleware('auth');
 Route::get('praktyki/{practice:slug}', [PracticeController::class, 'show']);
-Route::get('/praktyki', [PracticeController::class, 'index']);
+Route::get('/praktyki', [PracticeController::class, 'index'])->name('practice.index');
+Route::get('/praktyki/edit/{practice}', [PracticeController::class, 'edit']);
 Route::post('praktyki', [PracticeController::class, 'store'])->middleware('auth');
 
 Route::get('/posts/create', [PostController::class, 'create'])->middleware('auth');
 Route::delete('posts/{post}', [PostController::class, 'destroy'])->middleware('auth');
+Route::put('posts/{post}', [PostController::class, 'update'])->middleware('auth');
 Route::get('posts/{post:slug}', [PostController::class, 'show']);
+Route::get('posts/edit/{post}', [PostController::class, 'edit']);
 Route::post('/posts', [PostController::class, 'store'])->middleware('auth');
 
 Route::post('/upload', [PostController::class, 'upload'])->name('ckeditor.upload');

@@ -22,12 +22,11 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-
-            User::create(['name' => 'Admin', 'email' => 'admin@example.com', 'password' => bcrypt('password'), 'is_admin' => 1]);
-            Category::create(['name' => 'Aktualnosci']);
-            Category::create(['name' => 'Sprawozdania']);
-            Category::create(['name' => 'Projekty']);
-            Practice::factory(19)->create();
-            Post::factory(20)->create();
+        User::create(['name' => 'Admin', 'email' => 'admin@example.com', 'password' => bcrypt('password'), 'is_admin' => 1]);
+        Category::create(['name' => 'Aktualnosci']);
+        Category::create(['name' => 'Sprawozdania']);
+        Category::create(['name' => 'Projekty']);
+        Practice::factory(19)->create();
+        Post::factory(20)->create();
     }
 }

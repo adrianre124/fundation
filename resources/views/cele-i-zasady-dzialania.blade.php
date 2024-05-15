@@ -30,7 +30,7 @@
                     uchodźców.</li>
             </ul>
             <div class="my-2"><img decoding="async" class="aligncenter mx-auto"
-                    src="https://fundacjaglosmlodych.org/wp-content/uploads/2016/02/F100008341.jpg" alt="photo1"
+                    src="{{asset('images/cele01.jpg')}}" alt="photo1"
                     width="301" height="140" /></div>
             <ul class="list-disc ml-6">
                 <li>Upowszechnianie wiedzy i metod społecznej kontroli funkcjonowania administracji i obrony praw
@@ -93,7 +93,7 @@
                 <li>Współpracę z organizacjami, instytucjami i osobami prowadzącymi działalność zgodną z celami
                     Fundacji.
                     <div class="oberazki"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
-                            src="https://fundacjaglosmlodych.org/wp-content/uploads/2016/02/F100006591.jpg"
+                            src="{{asset('images/cele02.jpg')}}"
                             alt="photo1" width="300" height="114" /></div>
                 </li>
             </ul>
@@ -163,7 +163,7 @@
             <p class="naglo">Dla osiągnięcia swoich celów Fundacja może wspierać działalność innych osób prawnych
                 lub osób fizycznych, prowadzących działalność zbieżną z jej celami.</p>
             <div class="my-2"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
-                    src="https://fundacjaglosmlodych.org/wp-content/uploads/2016/02/b.jpg" alt="photo1"
+                    src="{{asset('images/cele03.jpg')}}" alt="photo1"
                     width="401" height="129" /></div>
             <p class="naglo">W swojej działalności Fundacja jest niezależna od instytucji państwowych i
                 politycznych; nie wyręcza państwa i samorządów w wykonywaniu ich podstawowych obowiązków.</p>

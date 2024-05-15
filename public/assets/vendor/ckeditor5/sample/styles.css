@@ -490,6 +490,10 @@ footer {
 	color: rgba(0,0,0,.4);
 }
 
+.ratings span:hover ~ span {
+    color: orange;
+}
+
 /* --------- RWD --------------------------------------------------------------------------------------------------- */
 @media screen and ( max-width: 800px ) {
 	:root {

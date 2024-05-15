@@ -5,6 +5,9 @@ use App\Http\Controllers\PracticeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\JsonController;
+use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\WorkerController;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
@@ -67,3 +70,16 @@ Route::post('/upload', [PostController::class, 'upload'])->name('ckeditor.upload
 
 Route::get('/admin', [UserController::class, 'index'])->middleware('guest');
 Route::post('/admin', [UserController::class, 'login'])->middleware('guest');
+
+Route::post('/update-json', [JsonController::class, 'updateJson'])->name("updateJson")->middleware(('auth'));
+
+Route::get('/opinie', [ReviewController::class, 'index'])->name('reviews');
+Route::post('/reviews', [ReviewController::class, 'store']);
+Route::delete('/reviews/{review}', [ReviewController::class, 'destroy'])->middleware('auth');
+
+Route::get('/pracownicy', [WorkerController::class, 'index'])->name('workers.index');
+Route::get('/pracownicy/create', [WorkerController::class, 'create'])->middleware('auth');
+Route::get('/pracownicy/edit/{worker}', [WorkerController::class, 'edit'])->middleware('auth');
+Route::put('/pracownicy/{worker}', [WorkerController::class, 'update'])->middleware('auth');
+Route::post('/pracownicy', [WorkerController::class, 'store'])->middleware('auth');
+Route::delete('/pracownicy/{worker}', [WorkerController::class, 'destroy'])->middleware('auth');

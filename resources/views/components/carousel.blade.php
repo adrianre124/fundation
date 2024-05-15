@@ -4,7 +4,7 @@
         <!-- Carousel wrapper /fix images getting smaller on screen resize -->
         <x-wrapper>
             <!-- Item 1 -->
-            <x-carousel.item image="./images/19.png" header="Wśród celów statutowych Fundacji znajdują się:">
+            <x-carousel.item image="{{asset('images/19.png')}}" header="Wśród celów statutowych Fundacji znajdują się:">
                 <x-carousel.list>
                     <x-carousel.list-item>- Działania i inicjatywy wspierające rozwój
                         innowacyjności.</x-carousel.list-item>
@@ -13,7 +13,7 @@
                 </x-carousel.list>
             </x-carousel.item>
             <!-- Item 2 -->
-            <x-carousel.item image="./images/20.png" header="Promocja">
+            <x-carousel.item image="{{asset('images/20.png')}}" header="Promocja">
                 <x-carousel.list>
                     <x-carousel.list-item>- Zachęcanie do rozwoju, pogłębiania swojej wiedzy i podnoszenia swoich
                         kwalifikacji.</x-carousel.list-item>
@@ -21,7 +21,7 @@
                 </x-carousel.list>
             </x-carousel.item>
             <!-- Item 3 -->
-            <x-carousel.item image="./images/21.png" header="Wsparcie">
+            <x-carousel.item image="{{asset('images/21.png')}}" header="Wsparcie">
                 <x-carousel.list>
                     <x-carousel.list-item>- Integrowanie środowisk twórczych.</x-carousel.list-item>
                     <x-carousel.list-item>- Wspieranie projektów proekologicznych oraz propagowanie idei ochrony
@@ -31,7 +31,7 @@
                 </x-carousel.list>
             </x-carousel.item>
             <!-- Item 4 -->
-            <x-carousel.item image="./images/22.png" header="Rozwój">
+            <x-carousel.item image="{{asset('images/22.png')}}" header="Rozwój">
                 <x-carousel.list>
                     <x-carousel.list-item>- Działalność wspomagająca rozwój gospodarczy, w tym rozwój
                         przedsiębiorczości.</x-carousel.list-item>
@@ -42,7 +42,7 @@
                 </x-carousel.list>
             </x-carousel.item>
             <!-- Item 5 -->
-            <x-carousel.item image="./images/23.png" header="Pomoc">
+            <x-carousel.item image="{{asset('images/23.png')}}" header="Pomoc">
                 <x-carousel.list>
                     <x-carousel.list-item>- Pomoc edukacyjna dla dzieci niewidomych, słabowidzących i
                         niepełnosprawnych.</x-carousel.list-item>

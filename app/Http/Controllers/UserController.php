@@ -21,7 +21,7 @@ class UserController extends Controller
         ]);
 
         if (auth()->attempt($attributes)) {
-            return redirect('/aktualnosci');
+            return redirect('/');
         }
 
         throw ValidationException::withMessages([

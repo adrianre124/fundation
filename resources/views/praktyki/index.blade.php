@@ -59,10 +59,10 @@
                         <div class="wpb_single_image wpb_content_element vc_align_left">
 
                             <figure class="wpb_wrapper vc_figure">
-                                <a href="https://fundacjaglosmlodych.org/praktyki" target="_blank"
+                                <a href="/praktyki" target="_blank"
                                     class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high"
-                                        decoding="async" class="vc_single_image-img "
-                                        src="https://fundacjaglosmlodych.org/wp-content/uploads/2021/04/infografika_inny_font.png"
+                                        decoding="async" class="vc_single_image-img"
+                                        src="{{asset('images/infografika.png')}}"
                                         width="1080" height="566" alt="" title="" /></a>
                             </figure>
                         </div>

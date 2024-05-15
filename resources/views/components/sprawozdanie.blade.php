@@ -2,7 +2,7 @@
 
 <div class="flex flex-col md:max-w-80 md:min-h-96 border bg-white shadow mx-auto">
     <a href="/posts/{{ $post->slug }}/" class="min-w-48 w-1/2 md:w-full h-[300px] overflow-hidden">
-        <img src="{{ $post->thumbnail ? asset('storage/' . $post->thumbnail) : 'https://fundacjaglosmlodych.org/wp-content/uploads/2018/04/pexels-photo-1483891-300x200.jpeg'}}"
+        <img src="{{ $post->thumbnail ? asset('storage/' . $post->thumbnail) : './images/sprawozdanie.jpg'}}"
             alt="" class="w-full h-full object-cover"/>
     </a>
     <div class="p-5">

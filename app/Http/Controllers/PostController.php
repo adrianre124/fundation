@@ -46,10 +46,12 @@ class PostController extends Controller
             'category_id' => ['required', Rule::exists('categories', 'id')],
             'title' => 'required',
             'body' => 'required',
-            'thumbnail' => 'required|image',
+            'thumbnail' => 'image',
         ]);
 
-        $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+        if (isset($attributes['thumbnail'])){
+            $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+        }
 
         Post::create($attributes);
 

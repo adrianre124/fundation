@@ -5,9 +5,7 @@
         name="{{ $name }}"
         id="editor"
         {{ $attributes }}
-    >@if (isset($bodyText))
-        {!! $bodyText !!}
-    @endif</textarea>
+    >@if (isset($bodyText)){!! $bodyText !!}@endif</textarea>
 
     <x-form.error name="{{ $name }}"/>
 </x-form.field>

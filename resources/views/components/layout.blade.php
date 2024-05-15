@@ -37,69 +37,66 @@
 
 <body style="font-family: Open Sans, sans-serif">
     <div class="px-2 lg:px-9">
-        <div>
             <header class="max-w-full bg-white cursor-pointer">
                 <div class="flex justify-center items-center">
                     <a href="/"><img class="h-42" src="{{ asset('images/cropped-logo_fgm-2-1.png') }}"
                             alt="Logo Fundacji"></a>
                 </div>
             </header>
+        <x-nav.mobile />
+        <nav class="hidden sticky top-0 z-50 md:block bg-black text-white min-h-14 lg:h-14">
+            <ul
+                class="flex flex-row flex-wrap items-center align-middle justify-center text-sm text-nowrap py-auto h-full">
+                <x-nav.list-item route="/" name="STRONA GŁÓWNA" />
 
-            <x-nav.mobile />
+                <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
+                    class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full
+                    {{ request()->is('o-fundacji', 'statut-fundacji', 'zarzad-fundacji', 'cele-i-zasady-dzialania', 'dzialalnosc-gospodarcza', 'sprawozdania') ? '' : 'hover:bg-teal-300' }}">
+                    <a href="/o-fundacji" class="block py-2 w-full h-full">
+                        <p class="py-2 px-2">O FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                    </a>
 
-            <nav class="hidden md:block bg-black text-white min-h-14 lg:h-14">
-                <ul
-                    class="flex flex-row flex-wrap items-center align-middle justify-center text-sm text-nowrap py-auto h-full">
-                    <x-nav.list-item route="/" name="STRONA GŁÓWNA" />
+                    <!-- Dropdown menu -->
+                    <x-dropdown>
+                        <x-nav.dropdown-item route="/statut-fundacji">STATUT FUNDACJI</x-nav.dropdown-item>
+                        <x-nav.dropdown-item route="/zarzad-fundacji">ZARZĄD FUNDACJI</x-nav.dropdown-item>
+                        <x-nav.dropdown-item route="/cele-i-zasady-dzialania">CELE I ZASADY
+                            DZIAŁANIA</x-nav.dropdown-item>
+                        <x-nav.dropdown-item route="/dzialalnosc-gospodarcza">DZIAŁALNOŚĆ
+                            GOSPODARCZA</x-nav.dropdown-item>
+                        <x-nav.dropdown-item route="/sprawozdania">SPRAWOZDANIA</x-nav.dropdown-item>
+                    </x-dropdown>
+                </li>
 
-                    <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
-                        class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full
-                        {{ request()->is('o-fundacji', 'statut-fundacji', 'zarzad-fundacji', 'cele-i-zasady-dzialania', 'dzialalnosc-gospodarcza', 'sprawozdania') ? '' : 'hover:bg-teal-300' }}">
-                        <a href="/o-fundacji" class="block py-2 w-full h-full">
-                            <p class="py-2 px-2">O FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                {{-- <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
+                    class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full hover:bg-teal-300">
+                    <a href="/#" class="block py-2 w-full h-full">
+                        <p class="py-2 px-2">PRACOWNICY FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                    </a>
+
+                    <x-dropdown>
+                    <li>
+                        <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
+                            <p class="py-2">SPECJALIŚCI FUNDACJI</p>
                         </a>
-
-                        <!-- Dropdown menu -->
-                        <x-dropdown>
-                            <x-nav.dropdown-item route="/statut-fundacji">STATUT FUNDACJI</x-nav.dropdown-item>
-                            <x-nav.dropdown-item route="/zarzad-fundacji">ZARZĄD FUNDACJI</x-nav.dropdown-item>
-                            <x-nav.dropdown-item route="/cele-i-zasady-dzialania">CELE I ZASADY
-                                DZIAŁANIA</x-nav.dropdown-item>
-                            <x-nav.dropdown-item route="/dzialalnosc-gospodarcza">DZIAŁALNOŚĆ
-                                GOSPODARCZA</x-nav.dropdown-item>
-                            <x-nav.dropdown-item route="/sprawozdania">SPRAWOZDANIA</x-nav.dropdown-item>
-                        </x-dropdown>
                     </li>
-
-                    {{-- <li x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false"
-                        class="z-50 box-border text-sm cursor-pointer transform duration-300 flex items-center h-full hover:bg-teal-300">
-                        <a href="/#" class="block py-2 w-full h-full">
-                            <p class="py-2 px-2">PRACOWNICY FUNDACJI <i class="fa-solid fa-chevron-down fa-sm"></i></p>
+                    <li>
+                        <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
+                            <p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p>
                         </a>
+                    </li>
+                    </x-dropdown>
+                </li> --}}
 
-                        <x-dropdown>
-                        <li>
-                            <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
-                                <p class="py-2">SPECJALIŚCI FUNDACJI</p>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
-                                <p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p>
-                            </a>
-                        </li>
-                        </x-dropdown>
-                    </li> --}}
-
-
-                    <x-nav.list-item route="/praktyki" name="PRAKTYKI" />
-                    <x-nav.list-item route="/projekty" name="PROJEKTY" />
-                    <x-nav.list-item route="/aktualnosci" name="AKTUALNOŚCI" />
-                    <x-nav.list-item route="/galeria" name="GALERIA" />
-                    <x-nav.list-item route="/kontakt" name="KONTAKT" />
-                </ul>
-            </nav>
-        </div>
+                <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI"/>
+                <x-nav.list-item route="/praktyki" name="PRAKTYKI" />
+                <x-nav.list-item route="/projekty" name="PROJEKTY" />
+                <x-nav.list-item route="/aktualnosci" name="AKTUALNOŚCI" />
+                <x-nav.list-item route="/galeria" name="GALERIA" />
+                <x-nav.list-item route="/kontakt" name="KONTAKT" />
+                <x-nav.list-item route="/opinie" name="OPINIE" />
+            </ul>
+        </nav>
 
         {{ $slot }}
 
@@ -139,7 +136,7 @@
                 </div>
 
                 <div class="text-center text-gray-400 italic mt-12">
-                    <a href="https://fundacjaglosmlodych.org/" class="hover:text-blue-400">Copyright ©
+                    <a href="/" class="hover:text-blue-400">Copyright ©
                         <time>{{ date('Y') }}</time> Fundacja na rzecz promocji i rozwoju – Głos Młodych.</a>
                 </div>
 
@@ -169,7 +166,7 @@
                         </div>
                     </a>
 
-                    <a class="relative" href="https://fundacjaglosmlodych.org/manifest/">
+                    <a class="relative" href="/o-fundacji">
                         <img class="pointer-events-none relative z-10" src="{{ asset('images/AboutMe.png') }}"
                             alt="AboutMe">
                         <div

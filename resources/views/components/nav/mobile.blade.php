@@ -1,4 +1,4 @@
-<nav class="bg-black text-white md:hidden">
+<nav class="sticky top-0 z-50 bg-black text-white md:hidden">
     <ul class=" items-center align-middle justify-center text-base text-nowrap py-auto min-h-12">
         <li x-data="{ open: false }"
             class="flex flex-col block z-50 relative box-border cursor-pointer transform duration-300 w-full h-full items-center">
@@ -42,11 +42,13 @@
         </li> --}}
 
 
+        <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI" />
         <x-nav.list-item route="/praktyki" name="PRAKTYKI" />
         <x-nav.list-item route="/projekty" name="PROJEKTY" />
         <x-nav.list-item route="/aktualnosci" name="AKTUALNOŚCI" />
         <x-nav.list-item route="/galeria" name="GALERIA" />
         <x-nav.list-item route="/kontakt" name="KONTAKT" />
+        <x-nav.list-item route="/opinie" name="OPINIE" />
         </x-nav.mobile-dropdown>
         </li>
     </ul>

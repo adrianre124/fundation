@@ -6,7 +6,7 @@
 @endphp
 
 <x-main :title="$title" :route="$route">
-    <div class="flex-start py-10 space-y-10 w-full">
+    <div class="flex-start py-10 space-y-10 w-full md:pr-32">
         <h1 class="text-4xl font-semibold">{{ $post->title }}</h1>
         <div class="space-y-2">
             <hr />
@@ -14,7 +14,7 @@
                     href="/category/{{ $post->category->name }}">{{ $post->category->name }}</a></span>
             <hr />
         </div>
-        <div class="px-10">
+        <div class="text-lg">
             {!! $post->body !!}
         </div>
         <div class="flex row font-semibold">
@@ -50,21 +50,10 @@
             </div>
         </div>
         @auth
-        <div class="flex flex-col md:flex-row justify-center">
-            <div
-                class="mb-10 bg-blue-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-cyan-600">
-                <a href="/posts/edit/{{ $post->id }}" class="inline-block w-40 h-10 leading-10">Edytuj</a>
-            </div>
-
-            <div class="mb-10 bg-red-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-red-600">
-                <form method="POST" action="/posts/{{ $post->id }}">
-                    @csrf
-                    @method('DELETE')
-
-                    <button class="inline-block text-white w-40 h-10">Usuń</button>
-                </form>
-            </div>
-        </div>
+        <x-buttons.layout>
+            <x-buttons.edit route="/posts/edit/{{ $post->id }}"/>
+            <x-buttons.delete route="/posts/{{ $post->id }}"/>
+        </x-buttons.layout>
         @endauth
     </div>
 </x-main>

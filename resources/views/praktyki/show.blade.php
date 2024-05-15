@@ -6,8 +6,8 @@
 @endphp
 
 <x-main :title="$title" :route="$route">
-    <div class="py-10 space-y-10 text-lg">
-        <h1 class="text-3xl text-center text-blue-600 font-semibold">{{ $practice->title }} - Praktyki</h1>
+    <div class="py-10 space-y-10 text-lg pr-32">
+        <h1 class="text-3xl text-center text-blue-700 font-semibold">{{ $practice->title }} - Praktyki</h1>
         <div>{!! $practice->description !!}</div>
 
         @if (isset($practice->thumbnail))
@@ -34,32 +34,20 @@
             </ul>
         </div>
 
-        <div class="wpb_single_image wpb_content_element vc_align_left">
-
+        <div>
             <figure>
-                <a href="/praktyki" target="_blank" class="vc_single_image-wrapper   vc_box_border_grey"><img
-                        fetchpriority="high" decoding="async" class="vc_single_image-img "
-                        src="https://fundacjaglosmlodych.org/wp-content/uploads/2021/04/infografika_inny_font.png"
-                        width="1080" height="566" alt="" title="" /></a>
+                <a href="/praktyki" target="_blank"
+                    class="vc_single_image-wrapper   vc_box_border_grey"><img
+                        src="{{asset('images/infografika.png')}}"
+                        width="1080" height="566" /></a>
             </figure>
         </div>
 
         @auth
-        <div class="flex flex-col md:flex-row justify-center">
-            <div
-                class="mb-10 bg-blue-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-cyan-600">
-                <a href="/praktyki/edit/{{ $practice->id }}" class="inline-block w-40 h-10 leading-10">Edytuj</a>
-            </div>
-
-            <div class="mb-10 bg-red-400 text-white text-center w-40 mx-auto transition duration-200 hover:bg-red-600">
-                <form method="POST" action="/praktyki/{{ $practice->id }}">
-                    @csrf
-                    @method('DELETE')
-
-                    <button class="inline-block text-white w-40 h-10">Usuń</button>
-                </form>
-            </div>
-        </div>
+        <x-buttons.layout>
+            <x-buttons.edit route="/praktyki/edit/{{ $practice->id }}"/>
+            <x-buttons.delete route="/praktyki/{{ $practice->id }}"/>
+        </x-buttons.layout>
         @endauth
 
         <div class="flex flex-col md:flex-row justify-center">

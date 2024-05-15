@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
         Category::create(['name' => 'Aktualnosci']);
         Category::create(['name' => 'Sprawozdania']);
         Category::create(['name' => 'Projekty']);
-        Practice::factory(19)->create();
-        Post::factory(20)->create();
+        // Practice::factory(19)->create();
+        // Post::factory(20)->create();
     }
 }

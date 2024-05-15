@@ -6,34 +6,34 @@
 <x-main :title="$title" :route="$route">
     <div class="flex flex-wrap justify-center my-10">
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Pierscionek-przod-tyl-duzy-Aleksandra-Borkowska.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g1.jpg')}}"
             text="Pierscionek przód tył duzy Aleksandra Borkowska" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Pierscionek-klaudia-szczecinska.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g2.jpg')}}"
             text="Pierścionek Klaudia Szczecińska" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Kartka-swiateczna-1.jpg?bwg=1674651742"
+            src="{{ asset('images/galeria/g3.jpg')}}"
             text="Kartka świąteczna 1" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Kartka-wielkanocna-Klaudia-Szczecinska.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g4.jpg')}}"
             text="Kartka wielkanocna Klaudia Szczecińska" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/kolczyki_pudelko-Marta-Nowacka.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g5.jpg')}}"
             text="kolczyki_pudełko Marta Nowacka" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/pierscionek-Natalia-Szyszka.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g6.jpg')}}"
             text="pierścionek Natalia Szyszka" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Wojciech_Sobkowiak_pierscionek_zamkniety.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g7.jpg')}}"
             text="Wojciech Sobkowiak pierścionek zamknięty" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/DanielOlszewski_kolczyki_pudelko2.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g8.jpg')}}"
             text="Daniel Olszewski kolczyki pudełko2" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/Adam-Bylok-pierscionek-zareczynowy-pudelko.png?bwg=1674651742"
+            src="{{ asset('images/galeria/g9.jpg')}}"
             text="Adam Bylok - pierścionek zaręczynowy - pudelko" />
         <x-galery-image
-            src="https://fundacjaglosmlodych.org/wp-content/uploads/photo-gallery/imported_from_media_libray/kartka-wielkanocna-klonica-mateusz.png?bwg=1674651195"
+            src="{{ asset('images/galeria/g10.jpg')}}"
             text="kartka wielkanocna Kłonica Mateusz" />
     </div>
 </x-main>

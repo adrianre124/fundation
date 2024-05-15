@@ -27,7 +27,7 @@
                 <div
                     class="relative w-full max-w-full min-h-40 mx-auto h-full md:h-[450px] lg:w-[1470px] bg-[url('./images/licznik22.png')] bg-cover">
                     <div class="grid lg:grid-cols-8 gap-y-20 md:gap-4 text-white text-center h-full w-full py-8">
-                        <form id="achivements" method="POST" action=" {{ route('updateJson') }}">
+                        <form id="achivements" method="POST" action="{{ route('updateJson') }}">
                             @csrf
                             <button></button>
                         </form>
@@ -35,13 +35,15 @@
                                 liczbach!</strong></h3>
                         <div class="col-start-4 md:col-start-2 md:col-span-2 text-3xl">Zrealizowaliśmy <br><strong
                                 class="text-5xl">
-                                <input class="text-black" type="text" id="realized" name="realized" form="achivements" value="{{ $achivements['realized'] }}">
+                                <input class="text-black" type="text" id="realized" name="realized" form="achivements"
+                                    value="{{ $achivements['realized'] }}">
                             </strong><br> praktyk</div>
                         <div class="col-start-4 md:col-span-2 text-3xl">w tym <br><strong class="text-5xl">
-                            <input class="text-black" type="text" id="college" name="college" form="achivements" value="{{ $achivements['college'] }}"></strong><br> praktyk uczelnianych</div>
+                                <input class="text-black" type="text" id="college" name="college" form="achivements"
+                                    value="{{ $achivements['college'] }}"></strong><br> praktyk uczelnianych</div>
                         <div class="col-start-4 md:col-start-6 md:col-span-2 text-3xl">Współpracujemy z <br><strong
-                                class="text-5xl"><input class="text-black" type="text" id="people" name="people" form="achivements"
-                                    value="{{ $achivements['people'] }}"></strong><br> osobami</div>
+                                class="text-5xl"><input class="text-black" type="text" id="people" name="people"
+                                    form="achivements" value="{{ $achivements['people'] }}"></strong><br> osobami</div>
                         <div class="col-start-4 md:col-start-1 md:col-span-8 text-xl">Z zakresu dziennikarstwa, redakcji,
                             tłumaczeń, moderowania, programowania -różne technologie, reklamy, social mediów, administracji
                             systemów serwerowych, fotografii, ogólnie rozumianej grafiki , HR-u, administracji.</div>

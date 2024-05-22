@@ -31,7 +31,7 @@
                     uchodźców.</li>
             </ul>
             <div class="my-2"><img decoding="async" class="aligncenter mx-auto"
-                    src="{{asset('images/cele01.jpg')}}" alt="photo1"
+                    src="{{asset('images/cele01.jpg')}}" alt="człowiek piszący na tablicy"
                     width="301" height="140" /></div>
             <ul class="list-disc ml-6">
                 <li>Upowszechnianie wiedzy i metod społecznej kontroli funkcjonowania administracji i obrony praw
@@ -50,13 +50,13 @@
                 <li><a id="promocja"></a>Promocja i wspierania młodych kuratorów i krytyków sztuki.</li>
             </ul>
             <div class="flex flex-wrap my-2"><img fetchpriority="high" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/ca/ca1a/F100008818.jpg" alt="photo1" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/ca/ca1a/F100008818.jpg" alt="dłonie piszące na klawiaturze laptopa" width="300"
                     height="200" /><img decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/59/59c1/F100008355.jpg" alt="photo2" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/59/59c1/F100008355.jpg" alt="poprawianie muszki" width="300"
                     height="200" /><img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/e6/e6a4/F100006445.jpg" alt="photo3" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/e6/e6a4/F100006445.jpg" alt="dłonie trzymające mapę" width="300"
                     height="198" /><img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/cc/cc21/F100004857.jpg" alt="photo4" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/cc/cc21/F100004857.jpg" alt="kolorowe kulki na złączonych dłoniach" width="300"
                     height="200" /></div>
             <ul class="list-disc ml-6">
                 <li>Stymulowanie społecznych inicjatyw proekologicznych oraz propagowanie idei ochrony środowiska.
@@ -71,7 +71,7 @@
                 <li>Tworzenie warunków rozwoju twórczości młodego pokolenia.</li>
             </ul>
             <div class="my-2"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
-                    src="http://en.freejpg.com.ar/asset/900/04/04cf/F100008312.jpg" alt="photo1" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/04/04cf/F100008312.jpg" alt="dłoń w geście okej" width="300"
                     height="199" /></div>
             <ul class="list-disc ml-6">
                 <li>Integracja środowisk twórczych.</li>
@@ -95,7 +95,7 @@
                     Fundacji.
                     <div class="oberazki"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
                             src="{{asset('images/cele02.jpg')}}"
-                            alt="photo1" width="300" height="114" /></div>
+                            alt="osoba wychyla się znad blatu" width="300" height="114" /></div>
                 </li>
             </ul>
             <ul class="list-disc ml-6">
@@ -112,7 +112,7 @@
                 <li>Rzecznictwo interesów grup marginalizowanych społecznie.</li>
             </ul>
             <div class="my-2"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
-                    src="http://en.freejpg.com.ar/asset/900/37/37ca/F100006978.jpg" alt="photo1" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/37/37ca/F100006978.jpg" alt="nogi wchodzące po schodach" width="300"
                     height="200" /></div>
             <ul class="list-disc ml-6">
                 <li style="list-style-type: none;">
@@ -141,16 +141,16 @@
                 </li>
             </ul>
             <div class="flex-1 my-2"><img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/06/06e1/F100008892.jpg" alt="photo1" width="305"
+                    src="http://en.freejpg.com.ar/asset/900/06/06e1/F100008892.jpg" alt="cekiny na dłoniach" width="305"
                     height="203" /><br />
                 <img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/39/3951/F100008925.jpg" alt="photo2" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/39/3951/F100008925.jpg" alt="płot" width="300"
                     height="200" /><br />
                 <img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/OLD/comps/f001600.jpg" alt="photo3" width="300"
+                    src="http://en.freejpg.com.ar/asset/OLD/comps/f001600.jpg" alt="palce na klawiaturze" width="300"
                     height="201" /><br />
                 <img loading="lazy" decoding="async" class="oberazek"
-                    src="http://en.freejpg.com.ar/asset/900/ba/ba1b/F100006635.jpg" alt="photo4" width="300"
+                    src="http://en.freejpg.com.ar/asset/900/ba/ba1b/F100006635.jpg" alt="dron i rower" width="300"
                     height="200" />
             </div>
             <ul class="list-disc ml-6">
@@ -164,7 +164,7 @@
             <p class="naglo">Dla osiągnięcia swoich celów Fundacja może wspierać działalność innych osób prawnych
                 lub osób fizycznych, prowadzących działalność zbieżną z jej celami.</p>
             <div class="my-2"><img loading="lazy" decoding="async" class="aligncenter mx-auto"
-                    src="{{asset('images/cele03.jpg')}}" alt="photo1"
+                    src="{{asset('images/cele03.jpg')}}" alt="robienie zdjęć"
                     width="401" height="129" /></div>
             <p class="naglo">W swojej działalności Fundacja jest niezależna od instytucji państwowych i
                 politycznych; nie wyręcza państwa i samorządów w wykonywaniu ich podstawowych obowiązków.</p>

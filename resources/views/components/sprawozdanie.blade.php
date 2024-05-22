@@ -3,7 +3,7 @@
 <div class="flex flex-col md:max-w-80 md:min-h-96 border bg-white shadow mx-auto">
     <a href="/posts/{{ $post->slug }}/" class="min-w-48 w-1/2 md:w-full h-[300px] overflow-hidden">
         <img src="{{ $post->thumbnail ? asset('storage/' . $post->thumbnail) : './images/sprawozdanie.jpg'}}"
-            alt="" class="w-full h-full object-cover"/>
+            alt="sprawozdanie" class="w-full h-full object-cover"/>
     </a>
     <div class="p-5">
         <a href="/posts/{{ $post->slug }}/">

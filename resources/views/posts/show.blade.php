@@ -55,7 +55,7 @@
 </div>
         <div class="row justify-content-center">
         <a title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('page') }}" target="_blank" class="iconLink" style="filter: invert(35%) sepia(86%) saturate(443%) hue-rotate(182deg) brightness(93%) contrast(88%);">
-            <img src="{{ asset('images/facebook.svg') }}" class="icon">
+            <img src="{{ asset('images/facebook.svg') }}" alt="Udostępnij na Facebook'u" class="icon">
         </a>
 </div>
         @auth

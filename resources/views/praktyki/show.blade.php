@@ -16,7 +16,7 @@
                 @if (file_exists(public_path('storage/' . $practice->thumbnail)))
                 <img src="{{ asset('storage/' . $practice->thumbnail) }}" alt="Praktyki . {{ $practice->title }}" class="w-full object-cover mx-auto">
                 @else
-                <img src="{{ asset('storage/thumbnails/' . $practice->thumbnail) }}" alt="" class="w-full object-cover mx-auto">
+                <img src="{{ asset('storage/thumbnails/' . $practice->thumbnail) }}" alt="obrazek do praktyk" class="w-full object-cover mx-auto">
                 @endif
             </div>
         @endif

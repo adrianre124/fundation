@@ -42,7 +42,7 @@
         </li> --}}
 
 
-        <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI" />
+        {{-- <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI" /> --}}
         <x-nav.list-item route="/praktyki" name="PRAKTYKI" />
         <x-nav.list-item route="/projekty" name="PROJEKTY" />
         <x-nav.list-item route="/aktualnosci" name="AKTUALNOŚCI" />

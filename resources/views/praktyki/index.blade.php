@@ -64,7 +64,7 @@
                                     class="vc_single_image-wrapper   vc_box_border_grey"><img fetchpriority="high"
                                         decoding="async" class="vc_single_image-img"
                                         src="{{asset('images/infografika.png')}}"
-                                        width="1080" height="566" alt="" title="" /></a>
+                                        width="1080" height="566" alt="przedsawienie procesu rekrutacyjnego" title="" /></a>
                             </figure>
                         </div>
 

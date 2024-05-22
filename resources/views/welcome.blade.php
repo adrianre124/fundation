@@ -78,7 +78,7 @@
                 <div class="space-x-2 flex flex-col mb-12">
                     <h1 class="text-center text-3xl font-bold">Aktualności</h1>
 
-                    @foreach ($aktualnosci as $post)
+                    @foreach (\App\Models\Post::take(3)->get() as $post)
                         <x-welcome-post :post="$post" />
                     @endforeach
 

@@ -15,7 +15,7 @@
                                 <p><strong>
                                         <img fetchpriority="high" decoding="async" data-attachment-id="5596"
                                             class="size-medium wp-image-5596 alignleft shadow" src="{{asset('images/prezes.png')}}"
-                                            alt="" width="193" height="300" />
+                                            alt="prezes fundacji w serwerowni" width="193" height="300" />
                                     </strong></p>
                                 <p>&nbsp;</p>
                                 <p>&nbsp;</p>

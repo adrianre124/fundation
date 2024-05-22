@@ -83,13 +83,13 @@
                     </li>
                     <li>
                         <a href="#" class="block px-4 py-2 transform duration-200 hover:bg-teal-300">
-                            <p class="py-2">REDAKCJA PROTALU GLOSWSCHODU</p>
+                            <p class="py-2">REDAKCJA PORTALU GLOSWSCHODU</p>
                         </a>
                     </li>
                     </x-dropdown>
                 </li> --}}
 
-                <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI"/>
+                {{-- <x-nav.list-item route="/pracownicy" name="PRACOWNICY FUNDACJI"/> --}}
                 <x-nav.list-item route="/praktyki" name="PRAKTYKI" />
                 <x-nav.list-item route="/projekty" name="PROJEKTY" />
                 <x-nav.list-item route="/aktualnosci" name="AKTUALNOŚCI" />
@@ -138,7 +138,7 @@
 
                 <div class="text-center text-gray-400 italic mt-12">
                     <a href="/" class="hover:text-blue-400">Copyright ©
-                        <time>{{ date('Y') }}</time> Fundacja na rzecz promocji i rozwoju – Głos Młodych, Adrian Reszczyński and Dominik Głowacki</a>
+                        <time>{{ date('Y') }}</time> Fundacja na rzecz promocji i rozwoju – Głos Młodych, Adrian Reszczyński and Dominik Głowacki<br> Witryna stworzona za pomocą Laravel</a>
                 </div>
 
                 <div class="flex flex-nowrap justify-center space-x-2.5 mt-11">

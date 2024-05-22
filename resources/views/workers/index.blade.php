@@ -1,9 +1,10 @@
 @php
     $title = 'Pracownicy Fundacji';
     $route = ['Pracownicy Fundacji'];
+    $description = "Pracownicy Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
 
     <div class="relative overflow-x-auto mx-auto sm:rounded-lg">
         <table class="w-full text-sm mb-4 text-left rtl:text-right text-gray-500 dark:text-gray-400">

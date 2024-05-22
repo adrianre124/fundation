@@ -1,9 +1,10 @@
 @php
     $title = 'Zarząd fundacji';
     $route = ['Zarząd fundacji'];
+    $description = "Zarząd Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="entry-content mt-20">
         <div class="vc_row wpb_row vc_row-fluid">
             <div class="wpb_column vc_column_container vc_col-sm-9">

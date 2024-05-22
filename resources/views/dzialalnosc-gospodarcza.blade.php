@@ -1,9 +1,10 @@
 @php
     $title = 'Działalność gospodarcza';
     $route = ['Działalność gospodarcza'];
+    $description = "Działalność gospodarcza Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="mb-20 text-lg">
         <p class="mb-8" style="text-align: center;"><span style="color: #000000;"><strong>Fundacja może prowadzić
                     działalność

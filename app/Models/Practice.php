@@ -38,16 +38,8 @@ use Spatie\Sluggable\SlugOptions;
 class Practice extends Model
 {
     use HasFactory;
-    use HasSlug;
 
     protected $guarded = [];
-
-    public function getSlugOptions(): SlugOptions
-    {
-        return SlugOptions::create()
-            ->generateSlugsFrom('title')
-            ->saveSlugsTo('slug');
-    }
 
     public function delete()
     {

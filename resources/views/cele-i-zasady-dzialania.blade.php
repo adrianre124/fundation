@@ -1,9 +1,10 @@
 @php
     $title = 'Cele i zasady działania';
     $route = ['Cele i zasady działania'];
+    $description = "Cele i zasady działania Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="my-20 text-lg">
         <div>
             <p class="mb-4"><b>Celami Fundacji są:</b></p>

@@ -1,9 +1,10 @@
 @php
     $title = 'O Fundacji';
     $route = ['O fundacji'];
+    $description = "O Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
 
     <div class="entry-content">
         <div class="max-w-10/12 text-lg">

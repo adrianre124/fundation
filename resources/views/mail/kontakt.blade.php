@@ -1,9 +1,10 @@
 @php
     $title = 'Kontakt';
     $route = ['Kontakt'];
+    $description = "Kontakt";
 @endphp
 
-<x-layout :title="$title">
+<x-layout :title="$title" :description="$description">
     <x-route :route="$route"/>
     <main class="flex flex-col md:flex-row my-10 justify-center space-x-8">
         <div class="lg:w-4/12">

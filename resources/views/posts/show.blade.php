@@ -3,9 +3,10 @@
     $routeFirstArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
     $routeSecondArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[2]);
     $route = [$routeFirstArgument, $routeSecondArgument];
+    $description = $post->title;
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="flex-start py-10 space-y-10 w-full md:pr-32">
         <h1 class="text-4xl font-semibold">{{ $post->title }}</h1>
         <div class="space-y-2">
@@ -49,6 +50,14 @@
                 @endif
             </div>
         </div>
+        <div class="row justify-content-center">
+            <p>Udostępnij</p>
+</div>
+        <div class="row justify-content-center">
+        <a title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ url('page') }}" target="_blank" class="iconLink" style="filter: invert(35%) sepia(86%) saturate(443%) hue-rotate(182deg) brightness(93%) contrast(88%);">
+            <img src="{{ asset('images/facebook.svg') }}" class="icon">
+        </a>
+</div>
         @auth
         <x-buttons.layout>
             <x-buttons.edit route="/posts/edit/{{ $post->id }}"/>

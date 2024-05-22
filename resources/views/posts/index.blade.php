@@ -1,9 +1,10 @@
 @php
     $route = [explode('?', ucfirst(substr($_SERVER['REQUEST_URI'], 1)))[0]];
     $title = $route[0];
+    $description = "Aktualności";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <section>
         <div class="flex flex-wrap my-2 gap-2 text-sm">
             @foreach ($posts as $post)

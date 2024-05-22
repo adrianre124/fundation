@@ -64,4 +64,5 @@ class Post extends Model
 
         parent::delete();
     }
+
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Practice;
 use App\Http\Requests\StorePracticeRequest;
 use App\Http\Requests\UpdatePracticeRequest;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 
 class PracticeController extends Controller
@@ -41,6 +42,8 @@ class PracticeController extends Controller
         ]);
 
         $attributes['thumbnail'] = request()->file('thumbnail')->store('thumbnails');
+
+        $attributes['slug'] = Str::slug('praktyki ' . $attributes['title'], '-');
 
         Practice::create($attributes);
 

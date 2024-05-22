@@ -1,11 +1,12 @@
 @php
     $title = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
-    $routeFirstArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
-    $routeSecondArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[2]);
+    $routeFirstArgument = "Praktyki";
+    $routeSecondArgument = Str::ucfirst(explode('/', $_SERVER['REQUEST_URI'])[1]);
     $route = [$routeFirstArgument, $routeSecondArgument];
+    $description = 'Praktyki '. $practice->title;
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="py-10 space-y-10 text-lg pr-32">
         <h1 class="text-3xl text-center text-blue-700 font-semibold">{{ $practice->title }} - Praktyki</h1>
         <div>{!! $practice->description !!}</div>
@@ -13,7 +14,7 @@
         @if (isset($practice->thumbnail))
             <div class="container w-full mx-auto">
                 @if (file_exists(public_path('storage/' . $practice->thumbnail)))
-                <img src="{{ asset('storage/' .$practice->thumbnail) }}" alt="" class="w-full object-cover mx-auto">
+                <img src="{{ asset('storage/' . $practice->thumbnail) }}" alt="Praktyki . {{ $practice->title }}" class="w-full object-cover mx-auto">
                 @else
                 <img src="{{ asset('storage/thumbnails/' . $practice->thumbnail) }}" alt="" class="w-full object-cover mx-auto">
                 @endif

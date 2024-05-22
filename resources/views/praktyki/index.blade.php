@@ -1,9 +1,10 @@
 @php
     $title = 'Praktyki';
     $route = ['Praktyki'];
+    $description = "Praktyki";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="my-20">
         <div class="vc_row wpb_row vc_row-fluid">
             <div class="wpb_column vc_column_container vc_col-sm-12">
@@ -51,7 +52,7 @@
                         @foreach ($praktyki as $praktyka)
                             <div class="block w-full rounded bg-blue-400 text-center text-white hover:bg-blue-500">
                                 <a class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-rounded vc_btn3-style-flat vc_btn3-block vc_btn3-color-info"
-                                    href="/praktyki/{{ $praktyka->slug }}/" title="">
+                                    href="{{ $praktyka->slug }}" title="">
                                     <h1 class="py-4">{{ $praktyka->title }}</h1>
                                 </a>
                             </div>

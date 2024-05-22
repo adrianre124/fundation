@@ -1,9 +1,10 @@
 @php
     $title = 'Opinie';
     $route = ['Opinie'];
+    $description = "Opinie o Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="w-full">
         @if (session()->has('message'))
             <div class="border rounded-lg py-2 px-2 mt-2 bg-red-400 text-white">

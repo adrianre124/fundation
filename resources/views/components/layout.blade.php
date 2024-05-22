@@ -1,12 +1,13 @@
 <!doctype html>
+<html lang="pl">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="{{ $description ?? 'Fundacja Głos Młodych'}}"/>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 <title>
     @isset($title)
-        {{ $title }} -
+        {{ $title }}
     @endisset
-    Fundacja Głos Młodych
 </title>
 {{-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
 <link rel="icon" type="image/x-icon" href="/images/cropped-logo-32x32.webp">
@@ -137,7 +138,7 @@
 
                 <div class="text-center text-gray-400 italic mt-12">
                     <a href="/" class="hover:text-blue-400">Copyright ©
-                        <time>{{ date('Y') }}</time> Fundacja na rzecz promocji i rozwoju – Głos Młodych.</a>
+                        <time>{{ date('Y') }}</time> Fundacja na rzecz promocji i rozwoju – Głos Młodych, Adrian Reszczyński and Dominik Głowacki</a>
                 </div>
 
                 <div class="flex flex-nowrap justify-center space-x-2.5 mt-11">
@@ -178,3 +179,4 @@
         </div>
     </div>
 </body>
+</html>

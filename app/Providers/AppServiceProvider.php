@@ -20,7 +20,8 @@ class AppServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void
+    
+     public function boot(): void
     {
         View::share('aktualnosci', Post::whereHas('category', function($q) {
             $q->where('name','like', 'Aktualnosci');

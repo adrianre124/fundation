@@ -1,9 +1,10 @@
 @php
     $title = 'Galeria';
     $route = ['Galeria'];
+    $description = "Galeria Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div class="flex flex-wrap justify-center my-10">
         <x-galery-image
             src="{{ asset('images/galeria/g1.jpg')}}"

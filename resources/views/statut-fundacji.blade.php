@@ -1,9 +1,10 @@
 @php
     $title = 'Statut Fundacji';
     $route = ['Statut Fundacji'];
+    $description = "Statut Fundacji Głos Młodych";
 @endphp
 
-<x-main :title="$title" :route="$route">
+<x-main :title="$title" :route="$route" :description="$description">
     <div id="content" role="main" class="ml-4 max-w-10/12 text-lg">
         <div id="post-149" class="post-149 page type-page status-publish hentry">
             <div class="entry-content">

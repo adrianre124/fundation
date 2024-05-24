@@ -9,7 +9,7 @@
 <x-main :title="$title" :route="$route" :description="$description">
     <div class="py-10 space-y-10 text-lg pr-32">
         <h1 class="text-3xl text-center text-blue-700 font-semibold">{{ $practice->title }} - Praktyki</h1>
-        <div>{!! $practice->description !!}</div>
+        <div class="space-y-4">{!! $practice->description !!}</div>
 
         @if (isset($practice->thumbnail))
             <div class="container w-full mx-auto">
@@ -22,7 +22,7 @@
         @endif
 
         <div>
-            <h2 class="text-lg"><strong>Obowiązki</strong> (dostosowane do umijętności praktykanta):</h2>
+            <h2 class="text-lg"><strong>Obowiązki</strong> (dostosowane do umiejętności praktykanta):</h2>
             <ul class="ml-5 list-disc space-y-2">
                 {!! $practice->duties !!}
             </ul>

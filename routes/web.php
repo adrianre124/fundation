@@ -25,7 +25,7 @@ use App\Models\Post;
 Route::get('/', function() {
     return view('welcome', ['projects' => Post::whereHas('category', function($q) {
         $q->where('name','like', 'Projekty');
-    })->limit(3)->get()]);
+    })->orderBy('created_at', 'desc')->limit(3)->get()]);
 })->name('/home');
 
 Route::get('statut-fundacji', fn() => view('statut-fundacji'));

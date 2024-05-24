@@ -6,7 +6,7 @@
                 <div>
                     <ul class="space-y-2 text-blue-700">
                         @foreach (\App\Models\Practice::all() as $practice)
-                            <li class="transformation duration-200 hover:text-red-400"><a href="{{$practice->slug}}">{{$practice->title}}</a></li>
+                            <li class="transformation duration-200 hover:text-red-400"><a href="/{{$practice->slug}}">{{$practice->title}}</a></li>
                         @endforeach
                     </ul>
                 </div>

@@ -29,7 +29,7 @@
                 <br>
                 <div>
                     <ul class="space-y-2 text-blue-700">
-                        @foreach (\App\Models\Post::take(3)->get() as $post)
+                        @foreach (\App\Models\Post::orderBy('created_at', 'desc')->take(3)->get() as $post)
                             <li class="transformation duration-200 hover:text-red-400"><a href="/posts/{{$post->slug}}">{{$post->title}}</a></li>
                         @endforeach
                     </ul>

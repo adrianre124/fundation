@@ -15,7 +15,7 @@
                     href="/category/{{ $post->category->name }}">{{ $post->category->name }}</a></span>
             <hr />
         </div>
-        <div class="text-lg">
+        <div class="text-lg space-y-4">
             {!! $post->body !!}
         </div>
         <div class="flex row font-semibold">
